@@ -45,7 +45,7 @@ def index():
 
 @app.route("/",methods = ['POST'])
 def encrypt():
-    rotate= request.form['rot']
+    rotate= int(request.form['rot'])
     message=request.form['text']
     jumble=rotate_string(message,rotate)
     #return "<<h1>"+ jumble +"</h1>"
